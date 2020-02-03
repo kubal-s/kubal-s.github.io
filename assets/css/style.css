@@ -6,21 +6,9 @@ body{
     word-spacing: 0.3em;
 }
 /* This applies common styling to subsection of page to have uniformity */
-/* .page-section{
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    margin-top: 100px;
-}
-.page-section header{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-} */
 .page-section header{
     display: grid;
     justify-items: center;
-    margin-top: 100px;
 }
 .page-section{
     display: grid;
@@ -104,6 +92,7 @@ body{
     display: flex;
     flex-direction: row;
     flex-flow: row wrap;
+    justify-content: center;
 }
 /* multiple elements with same CSS styling */
 .news-card-container > article 
@@ -157,8 +146,8 @@ body{
     border: solid 5px #00E4C0;
 }
 .testimonials-container div{
-    display: flex;
-    flex-direction: row;
+    display: grid;
+    grid-template-columns: auto auto auto;
     align-items: center;
 }
 .testimonials-container .dot {
@@ -174,9 +163,9 @@ body{
 
 /* CSS to form section */
 .form-container .form-row{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: center;
 }
 .form-container input[type=text], 
 .form-container input[type=email], 
@@ -214,13 +203,11 @@ body{
 /* CSS to summary section */
 summary{
     margin-top: 100px;
-    display: flex;
-    flex-direction: row;
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(500px,2fr));
     justify-content: space-between;
 }
-summary div:nth-child(1){
-    flex: 0.5;
-}
+
 summary .contact-details{
     display: grid;
     grid-template-columns: auto auto auto;
@@ -231,11 +218,7 @@ summary .contact-details{
     text-align: center;
 }
 /* CSS for the services section */
-/* .service-card-container{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-} */
+
 .service-card-container{
     display: grid;
     grid-row-gap: 40px;
@@ -305,16 +288,12 @@ summary .contact-details{
     background-color: white;
 }
 /* CSS styling for about me section */
-/* .about-me-container{
-    display: flex;
-    flex-direction: row;
-} */
+
 .about-me-container{
     display: grid;
     grid-template-columns: auto auto;
 }
 .about-me-container > div{
-    flex: 1;
     padding: 0px 40px;
 }
 .about-me-container aside img{
@@ -324,21 +303,20 @@ summary .contact-details{
 }
 .about-me-container article{
     width: 250px;
-    display: flex;
+    display: grid;
 }
 .about-me-container article a{
     text-decoration: none;
     color: #00E4C0;
 }
 .about-me-container article div{
-    display: flex;
-    flex-direction: column;
+    display: grid;
     justify-content: space-between;
 }
 /* Custom CSS for the navbar on top of page */
 .navbar{
-    display: flex;
-    justify-content: flex-end;
+    display: grid;
+    justify-content: end;
 }
 .navbar a{
     text-decoration: none;
@@ -420,6 +398,11 @@ https://medium.com/@pppped/how-to-code-a-responsive-circular-percentage-chart-wi
         display: grid;
         grid-template-columns: auto;
         justify-items: center;
+    }
+    .home-container{
+        display: grid;
+        grid-template-columns: auto ;
+        grid-row-gap: 40px;
     }
 
   }
