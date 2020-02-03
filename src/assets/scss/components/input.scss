@@ -1,0 +1,23 @@
+.page-section input[type=submit]{
+    height: 3em;
+    width: 10em;
+    border-radius: 0.5em;
+    background-color: #00E4C0;
+    color: white;
+    border-color: #00E4C0;
+    font-size: 1em;
+}
+.page-section input[type=submit]:hover{
+    background-color: white;
+    color: black;
+}
+.form-container input[type=text], 
+.form-container input[type=email], 
+.form-container input[type=tel], 
+.form-container  select { 
+    padding: 12px 20px;
+    margin: 8px 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 20em;
+}

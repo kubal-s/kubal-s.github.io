@@ -1,0 +1,22 @@
+{
+  "name": "assignment_4",
+  "version": "1.0.0",
+  "description": "This project tries to simulate the given page look and feel using CSS using pure tag and class selectors,combinators,pseudo classes and pseudo elements.",
+  "main": "index.js",
+  "scripts": {
+    "sasst": "node-sass --watch ./src/assets/scss/main.scss ./src/assets/dist/main.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/neu-mis-info6150-spring-2020/assignment-4-kubal-s.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/neu-mis-info6150-spring-2020/assignment-4-kubal-s/issues"
+  },
+  "homepage": "https://github.com/neu-mis-info6150-spring-2020/assignment-4-kubal-s#readme",
+  "devDependencies": {
+    "node-sass": "^4.13.1"
+  }
+}

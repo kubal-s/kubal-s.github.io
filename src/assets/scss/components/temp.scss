@@ -15,27 +15,8 @@ body{
     justify-items: center;
     margin-top: 100px;
 }
-.page-section button,
-.page-section input[type=submit],
-.home-container button{
-    height: 3em;
-    width: 10em;
-    border-radius: 0.5em;
-    background-color: #00E4C0;
-    color: white;
-    border-color: #00E4C0;
-    font-size: 1em;
-}
-.home-container button{
-    border-radius: 2em;
-}
-/* pseudo class on state of element */
-.page-section button:hover,
-.page-section input[type=submit]:hover,
-.home-container button:hover{
-    background-color: white;
-    color: black;
-}
+
+
 /* Select all child p where parent is header tag */
 .page-section header > p:first-child{
     margin: unset;
