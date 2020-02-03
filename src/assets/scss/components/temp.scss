@@ -1,0 +1,419 @@
+/* Apply style to all elemets of the page 
+This is to have uniquiness of font family over the page */
+body{
+    font-family: Verdana, Geneva, sans-serif;
+
+    word-spacing: 0.3em;
+}
+/* This applies common styling to subsection of page to have uniformity */
+.page-section header{
+    display: grid;
+    justify-items: center;
+}
+.page-section{
+    display: grid;
+    justify-items: center;
+    margin-top: 100px;
+}
+.page-section button,
+.page-section input[type=submit],
+.home-container button{
+    height: 3em;
+    width: 10em;
+    border-radius: 0.5em;
+    background-color: #00E4C0;
+    color: white;
+    border-color: #00E4C0;
+    font-size: 1em;
+}
+.home-container button{
+    border-radius: 2em;
+}
+/* pseudo class on state of element */
+.page-section button:hover,
+.page-section input[type=submit]:hover,
+.home-container button:hover{
+    background-color: white;
+    color: black;
+}
+/* Select all child p where parent is header tag */
+.page-section header > p:first-child{
+    margin: unset;
+    font-size: 0.8em;
+    color: #00E4C0;
+}
+/* select second child of type p of header */
+.page-section header p:nth-child(2){
+    margin: 10px 0px;
+    font-size: 1.5em;
+}
+.font-color-aqua{
+    color: #00E4C0;
+}
+.section-separator{
+    border: 1px solid #00E4C0;
+}
+
+
+/* CSS specific to portfolio section */
+.work-img-container .wrk-img{
+    width: 300px;
+    height: 350px; 
+    position: relative;
+}
+.work-img-container .plus-sign{
+    display: none;
+}
+.work-img-container .wrk-img:hover{
+    opacity: 0.6;
+}
+/* select all siblings of class work image on hover of type plus-sign */
+ .work-img-container .wrk-img:hover +  .plus-sign{
+    display: block;
+    height: 100px;
+    width: 100px;
+    position: absolute;
+    z-index: 100;
+    margin: -227px 100px;
+}
+.work-img-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-content: space-around;
+    margin: 40px 0px;
+}
+
+.work-img-container div{
+    background-color: #00E4C0;
+    margin: 0px 10px 0px 10px;
+}
+/* This styling is specific to trending news section */
+.news-card-container{
+    display: flex;
+    flex-direction: row;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+/* multiple elements with same CSS styling */
+.news-card-container > article 
+,.news-card-container article img{
+    width: 400px;
+    border-radius: 0.5em;
+}
+.news-card-container > article {
+    margin: 20px;
+    height: 500px;
+    box-shadow: 6px 7px 14px 1px rgba(161,169,173,1);
+}
+.news-card-container > article div:nth-child(2){
+    margin: 20px;
+}
+/* deep cascading to apply specific css */
+.news-card-container > article > div > article > p {
+    font-size: 0.8em;
+}
+.news-card-container  .news-know-more{
+    margin-top: 30px;
+}
+
+
+/* apply css to testimonials section */
+.testimonials-container{
+    display: grid;
+    justify-items: center;
+    align-items: center;
+}
+.testimonials-container p:nth-child(1){
+    width: 50em;
+    font-size: 0.8em;
+}
+.testimonials-container img{
+    border-radius: 50%;
+    object-fit: cover;
+}
+.testimonials-container img:nth-child(1),
+.testimonials-container img:nth-child(3){
+    width: 40px;
+    height: 40px;
+    z-index: -1;
+    margin-right: -10px;
+    margin-left: -10px;
+    border: solid 2px #00E4C0;
+}
+.testimonials-container img:nth-child(2){
+    width: 70px;
+    height: 70px;
+    border: solid 5px #00E4C0;
+}
+.testimonials-container div{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    align-items: center;
+}
+.testimonials-container .dot {
+    height: 10px;
+    width: 10px;
+    background-color: black;
+    border-radius: 50%;
+    margin: 5px;
+}
+.testimonials-container .dot:nth-child(2){
+    background-color: #00E4C0;
+}
+
+/* CSS to form section */
+.form-container .form-row{
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: center;
+}
+.form-container input[type=text], 
+.form-container input[type=email], 
+.form-container input[type=tel], 
+.form-container  select { 
+    padding: 12px 20px;
+    margin: 8px 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 20em;
+}
+.form-container  select { 
+    height: 40px;
+    width: 24em;
+}
+.form-container textarea{
+    width: 46em;
+    padding: 12px 20px;
+    margin: 8px 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+.form-map-img{
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+}
+.form-outer-container{
+    margin-top: 230px;
+    z-index: 100;
+}
+
+/* CSS to summary section */
+summary{
+    margin-top: 100px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(500px,2fr));
+    justify-content: space-between;
+}
+
+summary .contact-details{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    justify-content: space-between;
+}
+/* CSS  for the main page footer */
+.main-page-footer{
+    text-align: center;
+}
+/* CSS for the services section */
+
+.service-card-container{
+    display: grid;
+    grid-row-gap: 40px;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr) );
+    align-items: center;
+    margin-bottom: 20px;
+}
+.service-card-container .service-card-type1,
+.service-card-container .service-card-type2
+{
+    box-shadow: 6px 7px 14px 1px rgba(161,169,173,1);
+    margin: 0px 40px;
+    padding: 35px;
+}
+
+.service-card-container .service-card-type1{
+    display: grid;
+    justify-content: space-around;
+    height: 400px;
+    grid-column: auto/ span 2;
+}
+.service-card-container .service-card-type2{
+    height: 150px;
+    display: grid;
+    grid-column: auto / span 3;
+}
+.service-card-container .service-card-type2 p:nth-child(1){
+    font-weight: 600;
+    font-size: 2em;
+    margin: 10px;
+}
+.service-card-container .service-card-type1 p:nth-child(1){
+    font-size: 2em;
+    margin: 10px 0px;
+}
+.service-card-container .service-card-type1  img{
+    height: 100px;
+}
+.service-card-container .service-card-description{
+    font-size: 0.8em;
+}
+/* apply css pseudo class on change of state */
+.service-card-container .service-card-type1:hover{
+    background-color: #00E4C0;
+    color: white;
+}
+.service-card-container .service-card-type2:hover{
+    background-color: rgb(161, 243, 231);
+    color: white;
+}
+
+/* Customize the progress bar colors */
+.service-card-container .service-card-type2 progress::-moz-progress-bar { background-color:#00E4C0;}
+
+.service-card-container .service-card-type2 progress::-webkit-progress-value { background-color: #00E4C0; }
+
+.service-card-container .service-card-type2 progress { background-color: #00E4C0; }
+.service-card-container .service-card-type2 progress{
+    width: 100%;
+    height: 5px;
+    margin: 10px 0px 20px;
+}
+/*Referenced from http://html5doctor.com/the-progress-element/*/
+.service-card-container .service-card-type2:hover progress::-moz-progress-bar ,
+.service-card-container .service-card-type2:hover progress::-webkit-progress-value,
+.service-card-container .service-card-type2:hover progress {
+    background-color: white;
+}
+/* CSS styling for about me section */
+
+.about-me-container{
+    display: grid;
+    grid-template-columns: auto auto;
+}
+.about-me-container > div{
+    padding: 0px 40px;
+}
+.about-me-container aside img{
+    width: 500px;
+    height: 500px;
+    object-fit: cover;
+}
+.about-me-container article{
+    width: 250px;
+    display: grid;
+}
+.about-me-container article a{
+    text-decoration: none;
+    color: #00E4C0;
+}
+.about-me-container article div{
+    display: grid;
+    justify-content: space-between;
+}
+/* Custom CSS for the navbar on top of page */
+.navbar{
+    display: grid;
+    justify-content: end;
+}
+.navbar a{
+    text-decoration: none;
+    color: black;
+}
+.navbar a:hover{
+    color: #00E4C0;
+}
+.home-container{
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: space-around;
+    margin: 40px;
+}
+.home-container a{
+    text-decoration: none;
+    color: black;
+}
+.home-container .heading{
+    font-size: xx-large;
+}
+.navbar{
+    padding: 50px;
+    position: sticky;
+    position: -webkit-sticky;
+    top:0.1px;
+    background-color: white;
+}
+/* 
+Referenced from
+https://medium.com/@pppped/how-to-code-a-responsive-circular-percentage-chart-with-svg-and-css-3632f8cd7705 */
+.circular-chart {
+    display: block;
+    margin: 10px auto;
+    max-width: 80%;
+    max-height: 250px;
+  }
+  
+  .circle {
+    stroke: #4CC790;
+    fill: none;
+    stroke-width: 2.8;
+    stroke-linecap: round;
+    animation: progress 1s ease-out forwards;
+  }
+  .circle1{
+    stroke: lightgray;
+    fill: none;
+    stroke-width: 2.8;
+  }
+  svg .percentage {
+      font-size: 4px;
+  }
+  svg .percentage-type {
+    font-size: 2px;
+    word-spacing: normal;
+}
+  @keyframes progress {
+    0% {
+      stroke-dasharray: 0 100;
+    }
+  }
+  .svg-container{
+      margin-top: 50px;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    justify-content: center;
+
+  }
+  .sub-svg-container{
+    width: 200px;
+  }
+  @media only screen and (max-width: 800px) {
+    .svg-container{
+        display: grid;
+        grid-template-columns: auto auto;
+    }
+    .about-me-container{
+        display: grid;
+        grid-template-columns: auto;
+        justify-items: center;
+    }
+    .home-container{
+        display: grid;
+        grid-template-columns: auto ;
+        grid-row-gap: 40px;
+    }
+
+  }
+  @media only screen and (max-width: 1200px) {
+    .work-img-container{
+        grid-template-columns: repeat(2,1fr);
+    }
+  }
+
+  @media only screen and (max-width: 650px) {
+    .work-img-container{
+        grid-template-columns: repeat(1,1fr);
+    }
+  }
