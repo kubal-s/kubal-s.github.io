@@ -4,25 +4,32 @@
     flex-direction: row;
     flex-flow: row wrap;
     justify-content: center;
+    .news-know-more{
+        margin-top: 30px;
+    }
+    /* deep cascading to apply specific css */
+    > article {
+        margin: 20px;
+        height: 500px;
+        box-shadow: 6px 7px 14px 1px rgba(161,169,173,1);
+        width: 400px;
+        border-radius: 0.5em;
+        img{
+            width: 400px;
+            border-radius: 0.5em;
+        }
+        >div{
+            >article{
+                >p{
+                    font-size: 0.8em;
+                }
+            }
+        }
+        div:nth-child(2){
+            margin: 20px;
+        }
+    }
 }
-/* multiple elements with same CSS styling */
-.news-card-container > article 
-,.news-card-container article img{
-    width: 400px;
-    border-radius: 0.5em;
-}
-.news-card-container > article {
-    margin: 20px;
-    height: 500px;
-    box-shadow: 6px 7px 14px 1px rgba(161,169,173,1);
-}
-.news-card-container > article div:nth-child(2){
-    margin: 20px;
-}
-/* deep cascading to apply specific css */
-.news-card-container > article > div > article > p {
-    font-size: 0.8em;
-}
-.news-card-container  .news-know-more{
-    margin-top: 30px;
-}
+
+
+

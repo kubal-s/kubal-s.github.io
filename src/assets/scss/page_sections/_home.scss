@@ -1,13 +1,16 @@
+// Styling for home section
+//nested home section and used mixin fom grid layout
 .home-container{
     @include grid('grid-template-columns', 'repeat(2, auto)');
     justify-content: space-around;
     margin: 40px;
     padding-top: 20px;
+    a{
+        text-decoration: none;
+        color: $secondary-color;
+    }
+    .heading{
+        font-size: xx-large;
+    }
 }
-.home-container a{
-    text-decoration: none;
-    color: $secondary-color;
-}
-.home-container .heading{
-    font-size: xx-large;
-}
+

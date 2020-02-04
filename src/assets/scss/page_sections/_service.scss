@@ -20,6 +20,17 @@ $class-slug: service-card-type !default;
         @else if $i == 2{
             @include grid('grid-column', 'auto/ span 3');
             height: 150px;
+            /* Customize the progress bar colors */
+            progress::-moz-progress-bar { background-color:#00E4C0;}
+
+            progress::-webkit-progress-value { background-color: #00E4C0; }
+
+            progress { background-color: #00E4C0; }
+            progress{
+                width: 100%;
+                height: 5px;
+                margin: 10px 0px 20px;
+            }
         }
     }
 }
@@ -48,15 +59,5 @@ $class-slug: service-card-type !default;
     background-color: rgb(161, 243, 231);
     color: white;
 }
-/* Customize the progress bar colors */
-.service-card-container .service-card-type2 progress::-moz-progress-bar { background-color:#00E4C0;}
 
-.service-card-container .service-card-type2 progress::-webkit-progress-value { background-color: #00E4C0; }
-
-.service-card-container .service-card-type2 progress { background-color: #00E4C0; }
-.service-card-container .service-card-type2 progress{
-    width: 100%;
-    height: 5px;
-    margin: 10px 0px 20px;
-}
 /*Referenced from http://html5doctor.com/the-progress-element/*/
