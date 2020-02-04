@@ -153,32 +153,38 @@ svg .percentage-type {
   text-align: center; }
 
 .service-card-container {
-  display: grid;
   grid-row-gap: 40px;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
   align-items: center;
   margin-bottom: 20px; }
+  @supports (display: grid) {
+    .service-card-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); } }
 
 .service-card-type1 {
   box-shadow: 6px 7px 14px 1px #a1a9ad;
   margin: 0px 40px;
   padding: 35px; }
+  @supports (display: grid) {
+    .service-card-type1 {
+      display: grid;
+      grid-column: auto/ span 2; } }
 
 .service-card-type2 {
   box-shadow: 6px 7px 14px 1px #a1a9ad;
   margin: 0px 40px;
   padding: 35px; }
+  @supports (display: grid) {
+    .service-card-type2 {
+      display: grid;
+      grid-column: auto/ span 3; } }
 
 .service-card-container .service-card-type1 {
-  display: grid;
   justify-content: space-around;
-  height: 400px;
-  grid-column: auto/ span 2; }
+  height: 400px; }
 
 .service-card-container .service-card-type2 {
-  height: 150px;
-  display: grid;
-  grid-column: auto / span 3; }
+  height: 150px; }
 
 .service-card-container .service-card-type2 p:nth-child(1) {
   font-weight: 600;
