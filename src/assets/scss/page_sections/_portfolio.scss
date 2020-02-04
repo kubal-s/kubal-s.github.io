@@ -1,31 +1,30 @@
 /* CSS specific to portfolio section */
-.work-img-container .wrk-img{
-    width: 300px;
-    height: 350px; 
-    position: relative;
-}
-.work-img-container .plus-sign{
-    display: none;
-}
-.work-img-container .wrk-img:hover{
-    opacity: 0.6;
-}
-/* select all siblings of class work image on hover of type plus-sign */
- .work-img-container .wrk-img:hover +  .plus-sign{
-    display: block;
-    height: 100px;
-    width: 100px;
-    position: absolute;
-    z-index: 100;
-    margin: -227px 100px;
-}
 .work-img-container {
     @include grid('grid-template-columns', 'repeat(4, auto)');
     justify-content: space-around;
     margin: 40px 0px;
-}
-
-.work-img-container div{
-    background-color: $primary-color;
-    margin: 0px 10px 0px 10px;
+    div{
+        background-color: $primary-color;
+        margin: 0px 10px 0px 10px;
+    }
+    /* select all siblings of class work image on hover of type plus-sign */
+    .wrk-img:hover +  .plus-sign{
+        display: block;
+        height: 100px;
+        width: 100px;
+        position: absolute;
+        z-index: 100;
+        margin: -227px 100px;
+    }
+    .plus-sign{
+        display: none;
+    }
+    .wrk-img{
+        width: 300px;
+        height: 350px; 
+        position: relative;
+    }
+    .wrk-img:hover{
+        opacity: 0.6;
+    } 
 }

@@ -156,64 +156,56 @@ svg .percentage-type {
     .service-card-container {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); } }
-
-.service-card-type1 {
-  box-shadow: 6px 7px 14px 1px #a1a9ad;
-  margin: 0px 40px;
-  padding: 35px;
-  height: 400px;
-  justify-content: space-around; }
-  @supports (display: grid) {
-    .service-card-type1 {
-      display: grid;
-      grid-column: auto/ span 2; } }
-
-.service-card-type2 {
-  box-shadow: 6px 7px 14px 1px #a1a9ad;
-  margin: 0px 40px;
-  padding: 35px;
-  height: 150px;
-  /* Customize the progress bar colors */ }
-  @supports (display: grid) {
-    .service-card-type2 {
-      display: grid;
-      grid-column: auto/ span 3; } }
-  .service-card-type2 progress::-moz-progress-bar {
+  .service-card-container .service-card-description {
+    font-size: 0.8em; }
+  .service-card-container .service-card-type1 {
+    box-shadow: 6px 7px 14px 1px #a1a9ad;
+    margin: 0px 40px;
+    padding: 35px;
+    height: 400px;
+    justify-content: space-around; }
+    .service-card-container .service-card-type1 p:nth-child(1) {
+      font-size: 2em;
+      margin: 10px 0px; }
+    @supports (display: grid) {
+      .service-card-container .service-card-type1 {
+        display: grid;
+        grid-column: auto/ span 2; } }
+    .service-card-container .service-card-type1 img {
+      height: 100px; }
+  .service-card-container .service-card-type1:hover {
+    color: white;
     background-color: #00E4C0; }
-  .service-card-type2 progress::-webkit-progress-value {
-    background-color: #00E4C0; }
-  .service-card-type2 progress {
-    background-color: #00E4C0; }
-  .service-card-type2 progress {
-    width: 100%;
-    height: 5px;
-    margin: 10px 0px 20px; }
+  .service-card-container .service-card-type2 {
+    box-shadow: 6px 7px 14px 1px #a1a9ad;
+    margin: 0px 40px;
+    padding: 35px;
+    height: 150px;
+    /* Customize the progress bar colors */
+    /*Referenced from http://html5doctor.com/the-progress-element/*/ }
+    .service-card-container .service-card-type2 p:nth-child(1) {
+      font-size: 2em;
+      margin: 10px 0px; }
+    .service-card-container .service-card-type2 p:nth-child(1) {
+      font-weight: 600; }
+    @supports (display: grid) {
+      .service-card-container .service-card-type2 {
+        display: grid;
+        grid-column: auto/ span 3; } }
+    .service-card-container .service-card-type2 progress::-moz-progress-bar {
+      background-color: #00E4C0; }
+    .service-card-container .service-card-type2 progress::-webkit-progress-value {
+      background-color: #00E4C0; }
+    .service-card-container .service-card-type2 progress {
+      background-color: #00E4C0; }
+    .service-card-container .service-card-type2 progress {
+      width: 100%;
+      height: 5px;
+      margin: 10px 0px 20px; }
+  .service-card-container .service-card-type2:hover {
+    color: white;
+    background-color: #a1f3e7; }
 
-.service-card-container .service-card-type2 p:nth-child(1) {
-  font-weight: 600;
-  font-size: 2em;
-  margin: 10px; }
-
-.service-card-container .service-card-type1 p:nth-child(1) {
-  font-size: 2em;
-  margin: 10px 0px; }
-
-.service-card-container .service-card-type1 img {
-  height: 100px; }
-
-.service-card-container .service-card-description {
-  font-size: 0.8em; }
-
-/* apply css pseudo class on change of state */
-.service-card-container .service-card-type1:hover {
-  background-color: #00E4C0;
-  color: white; }
-
-.service-card-container .service-card-type2:hover {
-  background-color: #a1f3e7;
-  color: white; }
-
-/*Referenced from http://html5doctor.com/the-progress-element/*/
 /* apply css to testimonials section */
 .testimonials-container {
   display: grid;
@@ -259,37 +251,32 @@ svg .percentage-type {
     font-size: 0.8em; }
 
 /* CSS specific to portfolio section */
-.work-img-container .wrk-img {
-  width: 300px;
-  height: 350px;
-  position: relative; }
-
-.work-img-container .plus-sign {
-  display: none; }
-
-.work-img-container .wrk-img:hover {
-  opacity: 0.6; }
-
-/* select all siblings of class work image on hover of type plus-sign */
-.work-img-container .wrk-img:hover + .plus-sign {
-  display: block;
-  height: 100px;
-  width: 100px;
-  position: absolute;
-  z-index: 100;
-  margin: -227px 100px; }
-
 .work-img-container {
   justify-content: space-around;
-  margin: 40px 0px; }
+  margin: 40px 0px;
+  /* select all siblings of class work image on hover of type plus-sign */ }
   @supports (display: grid) {
     .work-img-container {
       display: grid;
       grid-template-columns: repeat(4, auto); } }
-
-.work-img-container div {
-  background-color: #00E4C0;
-  margin: 0px 10px 0px 10px; }
+  .work-img-container div {
+    background-color: #00E4C0;
+    margin: 0px 10px 0px 10px; }
+  .work-img-container .wrk-img:hover + .plus-sign {
+    display: block;
+    height: 100px;
+    width: 100px;
+    position: absolute;
+    z-index: 100;
+    margin: -227px 100px; }
+  .work-img-container .plus-sign {
+    display: none; }
+  .work-img-container .wrk-img {
+    width: 300px;
+    height: 350px;
+    position: relative; }
+  .work-img-container .wrk-img:hover {
+    opacity: 0.6; }
 
 /* This styling is specific to trending news section */
 .news-card-container {
@@ -344,13 +331,12 @@ summary {
     summary {
       display: grid;
       grid-template-columns: repeat(auto-fill,minmax(500px,2fr)); } }
-
-summary .contact-details {
-  justify-content: space-between; }
-  @supports (display: grid) {
-    summary .contact-details {
-      display: grid;
-      grid-template-columns: repeat(3, auto); } }
+  summary .contact-details {
+    justify-content: space-between; }
+    @supports (display: grid) {
+      summary .contact-details {
+        display: grid;
+        grid-template-columns: repeat(3, auto); } }
 
 .home-container {
   justify-content: space-around;
