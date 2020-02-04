@@ -1,0 +1,67 @@
+.service-card-container{
+    grid-row-gap: 40px;
+    align-items: center;
+    margin-bottom: 20px;
+    @include grid('grid-template-columns', 'repeat(auto-fill, minmax(280px, 1fr))');
+}
+.service-card-container .service-card-type1,
+.service-card-container .service-card-type2
+{
+    box-shadow: 6px 7px 14px 1px rgba(161,169,173,1);
+    margin: 0px 40px;
+    padding: 35px;
+}
+
+
+
+.service-card-container .service-card-type1{
+    @include grid('grid-column', 'auto/ span 2');
+    justify-content: space-around;
+    height: 400px;;
+}
+.service-card-container .service-card-type2{
+    height: 150px;
+    @include grid('grid-column','auto / span 3');
+}
+.service-card-container .service-card-type2 p:nth-child(1){
+    font-weight: 600;
+    font-size: 2em;
+    margin: 10px;
+}
+.service-card-container .service-card-type1 p:nth-child(1){
+    font-size: 2em;
+    margin: 10px 0px;
+}
+.service-card-container .service-card-type1  img{
+    height: 100px;
+}
+.service-card-container .service-card-description{
+    font-size: 0.8em;
+}
+/* apply css pseudo class on change of state */
+.service-card-container .service-card-type1:hover{
+    background-color: $primary-color;
+    color: $tertiary-color;
+}
+.service-card-container .service-card-type2:hover{
+    background-color: rgb(161, 243, 231);
+    color: $tertiary-color;
+}
+
+/* Customize the progress bar colors */
+.service-card-container .service-card-type2 progress::-moz-progress-bar { background-color:$primary-color;}
+
+.service-card-container .service-card-type2 progress::-webkit-progress-value { background-color: $primary-color; }
+
+.service-card-container .service-card-type2 progress { background-color: $primary-color; }
+.service-card-container .service-card-type2 progress{
+    width: 100%;
+    height: 5px;
+    margin: 10px 0px 20px;
+}
+/*Referenced from http://html5doctor.com/the-progress-element/*/
+.service-card-container .service-card-type2:hover progress::-moz-progress-bar ,
+.service-card-container .service-card-type2:hover progress::-webkit-progress-value,
+.service-card-container .service-card-type2:hover progress {
+    background-color: $tertiary-color;
+}
