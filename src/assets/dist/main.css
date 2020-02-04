@@ -53,10 +53,12 @@ body {
   margin: -227px 100px; }
 
 .work-img-container {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
   justify-content: space-around;
   margin: 40px 0px; }
+  @supports (display: grid) {
+    .work-img-container {
+      display: grid;
+      grid-template-columns: repeat(4, auto); } }
 
 .work-img-container div {
   background-color: #00E4C0;
@@ -119,9 +121,11 @@ body {
   border: solid 5px #00E4C0; }
 
 .testimonials-container div {
-  display: grid;
-  grid-template-columns: auto auto auto;
   align-items: center; }
+  @supports (display: grid) {
+    .testimonials-container div {
+      display: grid;
+      grid-template-columns: repeat(3, auto); } }
 
 .testimonials-container .dot {
   height: 10px;
@@ -135,30 +139,11 @@ body {
 
 /* CSS to form section */
 .form-container .form-row {
-  display: grid;
-  grid-template-columns: auto auto;
   justify-content: center; }
-
-.form-container input[type=text],
-.form-container input[type=email],
-.form-container input[type=tel],
-.form-container select {
-  padding: 12px 20px;
-  margin: 8px 10px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  width: 20em; }
-
-.form-container select {
-  height: 40px;
-  width: 24em; }
-
-.form-container textarea {
-  width: 46em;
-  padding: 12px 20px;
-  margin: 8px 10px;
-  border: 1px solid #ccc;
-  border-radius: 4px; }
+  @supports (display: grid) {
+    .form-container .form-row {
+      display: grid;
+      grid-template-columns: repeat(2, auto); } }
 
 .form-map-img {
   position: absolute;
@@ -179,9 +164,11 @@ summary {
   justify-content: space-between; }
 
 summary .contact-details {
-  display: grid;
-  grid-template-columns: auto auto auto;
   justify-content: space-between; }
+  @supports (display: grid) {
+    summary .contact-details {
+      display: grid;
+      grid-template-columns: repeat(3, auto); } }
 
 /* CSS  for the main page footer */
 .main-page-footer {
@@ -189,11 +176,13 @@ summary .contact-details {
 
 /* CSS for the services section */
 .service-card-container {
-  display: grid;
   grid-row-gap: 40px;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
   align-items: center;
   margin-bottom: 20px; }
+  @supports (display: grid) {
+    .service-card-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); } }
 
 .service-card-container .service-card-type1,
 .service-card-container .service-card-type2 {
@@ -258,9 +247,10 @@ summary .contact-details {
   background-color: white; }
 
 /* CSS styling for about me section */
-.about-me-container {
-  display: grid;
-  grid-template-columns: auto auto; }
+@supports (display: grid) {
+  .about-me-container {
+    display: grid;
+    grid-template-columns: repeat(2, auto); } }
 
 .about-me-container > div {
   padding: 0px 40px; }
@@ -295,10 +285,12 @@ summary .contact-details {
   color: #00E4C0; }
 
 .home-container {
-  display: grid;
-  grid-template-columns: auto auto;
   justify-content: space-around;
   margin: 40px; }
+  @supports (display: grid) {
+    .home-container {
+      display: grid;
+      grid-template-columns: repeat(2, auto); } }
 
 .home-container a {
   text-decoration: none;
@@ -312,7 +304,8 @@ summary .contact-details {
   position: sticky;
   position: -webkit-sticky;
   top: 0.1px;
-  background-color: white; }
+  background-color: white;
+  z-index: 101; }
 
 /* 
 Referenced from
@@ -348,33 +341,44 @@ svg .percentage-type {
 
 .svg-container {
   margin-top: 50px;
-  display: grid;
-  grid-template-columns: auto auto auto auto;
   justify-content: center; }
+  @supports (display: grid) {
+    .svg-container {
+      display: grid;
+      grid-template-columns: repeat(4, auto); } }
 
 .sub-svg-container {
   width: 200px; }
 
 @media only screen and (max-width: 800px) {
-  .svg-container {
-    display: grid;
-    grid-template-columns: auto auto; }
+  @supports (display: grid) {
+    .svg-container {
+      display: grid;
+      grid-template-columns: repeat(2, auto); } }
   .about-me-container {
-    display: grid;
-    grid-template-columns: auto;
     justify-items: center; }
+    @supports (display: grid) {
+      .about-me-container {
+        display: grid;
+        grid-template-columns: repeat(2, auto); } }
   .home-container {
-    display: grid;
-    grid-template-columns: auto;
-    grid-row-gap: 40px; } }
+    grid-row-gap: 40px; }
+    @supports (display: grid) {
+      .home-container {
+        display: grid;
+        grid-template-columns: auto; } } }
 
 @media only screen and (max-width: 1200px) {
-  .work-img-container {
-    grid-template-columns: repeat(2, 1fr); } }
+  @supports (display: grid) {
+    .work-img-container {
+      display: grid;
+      grid-template-columns: repeat(2,1fr); } } }
 
 @media only screen and (max-width: 650px) {
-  .work-img-container {
-    grid-template-columns: repeat(1, 1fr); } }
+  @supports (display: grid) {
+    .work-img-container {
+      display: grid;
+      grid-template-columns: repeat(1,1fr); } } }
 
 .page-section button,
 .home-container button {
@@ -417,3 +421,14 @@ svg .percentage-type {
   border: 1px solid #ccc;
   border-radius: 4px;
   width: 20em; }
+
+.form-container select {
+  height: 40px;
+  width: 24em; }
+
+.form-container textarea {
+  width: 46em;
+  padding: 12px 20px;
+  margin: 8px 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px; }

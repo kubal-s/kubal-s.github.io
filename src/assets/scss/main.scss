@@ -1,3 +1,6 @@
-@import "./components/temp.scss";
-@import "./components/button.scss";
-@import "./components/input.scss";
+@import "./base/base";
+@import "./layout.scss/grid";
+
+@import "./components/temp";
+@import "./components/button";
+@import "./components/input";

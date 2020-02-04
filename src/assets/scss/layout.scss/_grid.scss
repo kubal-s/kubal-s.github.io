@@ -1,0 +1,6 @@
+@mixin grid($grid-type, $args) {   
+    @supports (display: grid) {
+      display: grid;
+      #{$grid-type}: #{$args};
+    }
+  }
