@@ -13,19 +13,14 @@ $class-slug: service-card-type !default;
         padding: 35px;
         @if $i == 1{
             @include grid('grid-column', 'auto/ span 2');
+            height: 400px;
+            justify-content: space-around;
         }
         @else if $i == 2{
             @include grid('grid-column', 'auto/ span 3');
+            height: 150px;
         }
     }
-}
-
-.service-card-container .service-card-type1{
-    justify-content: space-around;
-    height: 400px;
-}
-.service-card-container .service-card-type2{
-    height: 150px;
 }
 .service-card-container .service-card-type2 p:nth-child(1){
     font-weight: 600;

@@ -2,6 +2,8 @@ $primary-color : #00E4C0;
 $secondary-color : black;
 $tertiary-color : white;
 
+$font-family : Verdana, Geneva, sans-serif;
+
 /* This applies common styling to subsection of page to have uniformity */
 .page-section{
     display: grid;
@@ -21,19 +23,12 @@ $tertiary-color : white;
             font-size: 0.8em;
             color: $primary-color;
         }
-        /* select second child of type p of header */
-        p:nth-child(2){
-            margin: 10px 0px;
-            font-size: 1.5em;
-        }
     }
-
-    
 }
 /* Apply style to all elemets of the page 
 This is to have uniquiness of font family over the page */
 body{
-    font-family: Verdana, Geneva, sans-serif;
+    font-family: $font-family;
     word-spacing: 0.3em;
 }
 

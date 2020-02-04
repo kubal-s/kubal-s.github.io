@@ -1,8 +1,7 @@
 /* CSS to summary section */
 summary{
     margin-top: 100px;
-    display: grid;
-    grid-template-columns: repeat(auto-fill,minmax(500px,2fr));
+    @include grid('grid-template-columns', 'repeat(auto-fill,minmax(500px,2fr))');
     justify-content: space-between;
 }
 
