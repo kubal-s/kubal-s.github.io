@@ -1,28 +1,29 @@
 .service-card-container{
+    display: grid;
     grid-row-gap: 40px;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr) );
     align-items: center;
     margin-bottom: 20px;
-    @include grid('grid-template-columns', 'repeat(auto-fill, minmax(280px, 1fr))');
 }
+.service-card-container .service-card-type1,
+.service-card-container .service-card-type2
+{
+    box-shadow: 6px 7px 14px 1px rgba(161,169,173,1);
+    margin: 0px 40px;
+    padding: 35px;
+}
+
 .service-card-container .service-card-type1{
-    @include grid('grid-column', 'auto/ span 2');
+    display: grid;
     justify-content: space-around;
-    height: 400px;;
+    height: 400px;
+    grid-column: auto/ span 2;
 }
 .service-card-container .service-card-type2{
     height: 150px;
-    @include grid('grid-column','auto / span 3');
+    display: grid;
+    grid-column: auto / span 3;
 }
-
-$card-type : service-card-type !default;
-@for $i from 1 through 2{
-    .#{$card-type}-#{$i}{
-        box-shadow: 6px 7px 14px 1px rgba(161,169,173,1);
-        margin: 0px 40px;
-        padding: 35px;
-    }
-}
-
 .service-card-container .service-card-type2 p:nth-child(1){
     font-weight: 600;
     font-size: 2em;
@@ -40,20 +41,20 @@ $card-type : service-card-type !default;
 }
 /* apply css pseudo class on change of state */
 .service-card-container .service-card-type1:hover{
-    background-color: $primary-color;
-    color: $tertiary-color;
+    background-color: #00E4C0;
+    color: white;
 }
+
 .service-card-container .service-card-type2:hover{
     background-color: rgb(161, 243, 231);
-    color: $tertiary-color;
+    color: white;
 }
-
 /* Customize the progress bar colors */
-.service-card-container .service-card-type2 progress::-moz-progress-bar { background-color:$primary-color;}
+.service-card-container .service-card-type2 progress::-moz-progress-bar { background-color:#00E4C0;}
 
-.service-card-container .service-card-type2 progress::-webkit-progress-value { background-color: $primary-color; }
+.service-card-container .service-card-type2 progress::-webkit-progress-value { background-color: #00E4C0; }
 
-.service-card-container .service-card-type2 progress { background-color: $primary-color; }
+.service-card-container .service-card-type2 progress { background-color: #00E4C0; }
 .service-card-container .service-card-type2 progress{
     width: 100%;
     height: 5px;
@@ -63,5 +64,5 @@ $card-type : service-card-type !default;
 .service-card-container .service-card-type2:hover progress::-moz-progress-bar ,
 .service-card-container .service-card-type2:hover progress::-webkit-progress-value,
 .service-card-container .service-card-type2:hover progress {
-    background-color: $tertiary-color;
+    background-color: white;
 }

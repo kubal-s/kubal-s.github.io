@@ -1,9 +1,21 @@
 @import "./base/base";
 @import "./layout.scss/grid";
 
-@import "./components/temp";
 @import "./components/button";
 @import "./components/input";
 @import "./components/svg";
+@import "./components/navbar";
+@import "./components/footer";
 
 @import "./page_sections/service";
+@import "./page_sections/testimonials";
+@import "./page_sections/portfolio";
+@import "./page_sections/news";
+@import "./page_sections/aboutme";
+@import "./page_sections//summary";
+@import "./page_sections/home";
+@import "./page_sections/contactme";
+
+
+
+@import "./layout.scss/viewportspecific";

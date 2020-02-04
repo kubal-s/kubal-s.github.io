@@ -1,0 +1,25 @@
+@media only screen and (max-width: 800px) {
+    .svg-container{
+        @include grid('grid-template-columns', 'repeat(2, auto)');
+    }
+    .about-me-container{
+        @include grid('grid-template-columns', 'repeat(2, auto)');
+        justify-items: center;
+    }
+    .home-container{
+        @include grid('grid-template-columns', 'auto');
+        grid-row-gap: 40px;
+    }
+
+  }
+  @media only screen and (max-width: 1200px) {
+    .work-img-container{
+        @include grid('grid-template-columns', 'repeat(2,1fr)');
+    }
+  }
+
+  @media only screen and (max-width: 650px) {
+    .work-img-container{
+        @include grid('grid-template-columns', 'repeat(1,1fr)');
+    }
+  }

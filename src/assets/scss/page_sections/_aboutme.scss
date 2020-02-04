@@ -1,0 +1,23 @@
+.about-me-container{
+    @include grid('grid-template-columns', 'repeat(2, auto)');
+}
+.about-me-container > div{
+    padding: 0px 40px;
+}
+.about-me-container aside img{
+    width: 500px;
+    height: 500px;
+    object-fit: cover;
+}
+.about-me-container article{
+    width: 250px;
+    display: grid;
+}
+.about-me-container article a{
+    text-decoration: none;
+    color: $primary-color;
+}
+.about-me-container article div{
+    display: grid;
+    justify-content: space-between;
+}

@@ -1,0 +1,20 @@
+/* Custom CSS for the navbar on top of page */
+.navbar{
+    display: grid;
+    justify-content: end;
+}
+.navbar a{
+    text-decoration: none;
+    color: $secondary-color;
+}
+.navbar a:hover{
+    color: $primary-color;
+}
+.navbar{
+    padding: 20px;
+    position: sticky;
+    position: -webkit-sticky;
+    top:0.1px;
+    background-color: $tertiary-color;
+    z-index: 101;
+}
