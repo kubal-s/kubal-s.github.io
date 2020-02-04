@@ -1,12 +1,17 @@
+//Imports all SCSS partials
+
+//imports layout and common styles
 @import "./base/base";
 @import "./layout.scss/grid";
 
+//imports styles for various components of project
 @import "./components/button";
 @import "./components/input";
 @import "./components/svg";
 @import "./components/navbar";
 @import "./components/footer";
 
+//imports styles for various subsections of project
 @import "./page_sections/service";
 @import "./page_sections/testimonials";
 @import "./page_sections/portfolio";
@@ -16,5 +21,5 @@
 @import "./page_sections/home";
 @import "./page_sections/contactme";
 
-
+//imports styles for various viewports done using media querries
 @import "./layout.scss/viewportspecific";
