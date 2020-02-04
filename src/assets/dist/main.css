@@ -377,12 +377,15 @@ summary .contact-details {
   font-size: xx-large; }
 
 /* CSS to form section */
-.form-container .form-row {
-  justify-content: center; }
-  @supports (display: grid) {
-    .form-container .form-row {
-      display: grid;
-      grid-template-columns: repeat(2, auto); } }
+.form-outer-container {
+  margin-top: 230px;
+  z-index: 100; }
+  .form-outer-container .form-container .form-row {
+    justify-content: center; }
+    @supports (display: grid) {
+      .form-outer-container .form-container .form-row {
+        display: grid;
+        grid-template-columns: repeat(2, auto); } }
 
 .form-map-img {
   position: absolute;
@@ -390,10 +393,6 @@ summary .contact-details {
   margin-right: auto;
   left: 0;
   right: 0; }
-
-.form-outer-container {
-  margin-top: 230px;
-  z-index: 100; }
 
 @media only screen and (max-width: 800px) {
   @supports (display: grid) {
