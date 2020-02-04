@@ -218,11 +218,6 @@ svg .percentage-type {
   margin: 10px 0px 20px; }
 
 /*Referenced from http://html5doctor.com/the-progress-element/*/
-.service-card-container .service-card-type2:hover progress::-moz-progress-bar,
-.service-card-container .service-card-type2:hover progress::-webkit-progress-value,
-.service-card-container .service-card-type2:hover progress {
-  background-color: white; }
-
 /* apply css to testimonials section */
 .testimonials-container {
   display: grid;
@@ -335,22 +330,19 @@ svg .percentage-type {
 .about-me-container > div {
   padding: 0px 40px; }
 
-.about-me-container aside img {
-  width: 500px;
-  height: 500px;
-  object-fit: cover; }
-
 .about-me-container article {
   width: 250px;
   display: grid; }
-
-.about-me-container article a {
-  text-decoration: none;
-  color: #00E4C0; }
-
-.about-me-container article div {
-  display: grid;
-  justify-content: space-between; }
+  .about-me-container article a {
+    text-decoration: none;
+    color: #00E4C0; }
+  .about-me-container article div {
+    display: grid;
+    justify-content: space-between; }
+  .about-me-container article aside img {
+    width: 500px;
+    height: 500px;
+    object-fit: cover; }
 
 /* CSS to summary section */
 summary {

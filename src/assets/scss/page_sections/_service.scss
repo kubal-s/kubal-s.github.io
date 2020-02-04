@@ -1,4 +1,5 @@
 .service-card-container{
+    // using @mixin defined in grid layout and using through @include
     @include grid('grid-template-columns', 'repeat(auto-fill, minmax(280px, 1fr))');
     grid-row-gap: 40px;
     align-items: center;
@@ -59,8 +60,3 @@ $class-slug: service-card-type !default;
     margin: 10px 0px 20px;
 }
 /*Referenced from http://html5doctor.com/the-progress-element/*/
-.service-card-container .service-card-type2:hover progress::-moz-progress-bar ,
-.service-card-container .service-card-type2:hover progress::-webkit-progress-value,
-.service-card-container .service-card-type2:hover progress {
-    background-color: white;
-}

@@ -3,6 +3,7 @@
     display: grid;
     justify-items: center;
     align-items: center;
+    // nesting rules inside parent
     img{
         border-radius: 50%;
         object-fit: cover;
@@ -36,6 +37,7 @@
         background-color: $primary-color;
     }
     div{
+        // using @mixin defined in grid layout and using through @include
         @include grid('grid-template-columns', 'repeat(3, auto)');
         align-items: center;
     }
