@@ -5,12 +5,14 @@
     align-items: center;
     margin-bottom: 20px;
 }
-.service-card-container .service-card-type1,
-.service-card-container .service-card-type2
-{
-    box-shadow: 6px 7px 14px 1px rgba(161,169,173,1);
-    margin: 0px 40px;
-    padding: 35px;
+$class-slug: service-card-type !default;
+
+@for $i from 1 through 2{
+  .#{$class-slug}#{$i}{
+        box-shadow: 6px 7px 14px 1px rgba(161,169,173,1);
+        margin: 0px 40px;
+        padding: 35px;
+    }
 }
 
 .service-card-container .service-card-type1{

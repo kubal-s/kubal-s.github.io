@@ -159,8 +159,12 @@ svg .percentage-type {
   align-items: center;
   margin-bottom: 20px; }
 
-.service-card-container .service-card-type1,
-.service-card-container .service-card-type2 {
+.service-card-type1 {
+  box-shadow: 6px 7px 14px 1px #a1a9ad;
+  margin: 0px 40px;
+  padding: 35px; }
+
+.service-card-type2 {
   box-shadow: 6px 7px 14px 1px #a1a9ad;
   margin: 0px 40px;
   padding: 35px; }
