@@ -1,9 +1,9 @@
 .service-card-container{
     // using @mixin defined in grid layout and using through @include
     @include grid('grid-template-columns', 'repeat(auto-fill, minmax(280px, 1fr))');
-    grid-row-gap: 40px;
+    grid-row-gap: distanceSetter(5,8)*1px;
     align-items: center;
-    margin-bottom: 20px;
+    margin-bottom: distanceSetter(5,4)*1px;
     .service-card-description{
         font-size: 0.8em;
     }
@@ -12,11 +12,11 @@
     @for $i from 1 through 2{
     .#{$class-slug}#{$i}{
             box-shadow: 6px 7px 14px 1px rgba(161,169,173,1);
-            margin: 0px 40px;
-            padding: 35px;
+            margin: 0px distanceSetter(5,8)*1px;
+            padding: distanceSetter(5,7)*1px;
             p:nth-child(1){
                 font-size: 2em;
-                margin: 10px 0px;
+                margin: distanceSetter(5,2)*1px 0px;
             }
             @if $i == 1{
                 @include grid('grid-column', 'auto/ span 2');
@@ -42,8 +42,8 @@
                 progress { background-color: $primary-color; }
                 progress{
                     width: 100%;
-                    height: 5px;
-                    margin: 10px 0px 20px;
+                    height: distanceSetter(5,1)*1px;
+                    margin: distanceSetter(5,2)*1px 0px distanceSetter(5,4)*1px;
                 }
             }
         }
@@ -58,5 +58,3 @@
         }
     }
 }
-
-

@@ -3,8 +3,8 @@
 .home-container{
     @include grid('grid-template-columns', 'repeat(2, auto)');
     justify-content: space-around;
-    margin: 40px;
-    padding-top: 20px;
+    margin: distanceSetter(5,8)*1px;
+    padding-top: distanceSetter(5,4)*1px;
     a{
         text-decoration: none;
         color: $secondary-color;

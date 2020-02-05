@@ -12,26 +12,26 @@
     @for $i from 1 through 3{
         img:nth-child(#{$i}){
                 @if $i == 1 or $i == 3{
-                    width: 40px;
-                    height: 40px;
+                    width: distanceSetter(5,8)*1px;
+                    height: distanceSetter(5,8)*1px;
                     z-index: -1;
-                    margin-right: -10px;
-                    margin-left: -10px;
+                    margin-right: distanceSetter(5,2)*-1px;
+                    margin-left: distanceSetter(5,2)*-1px;
                     border: solid 2px $primary-color;
                 }
                 @else if $i == 2{
-                    width: 70px;
-                    height: 70px;
+                    width: distanceSetter(5,14)*1px;
+                    height: distanceSetter(5,14)*1px;
                     border: solid 5px $primary-color;  
                 }
             }
         }
     .dot {
-        height: 10px;
-        width: 10px;
+        height: distanceSetter(5,2)*1px;
+        width: distanceSetter(5,2)*1px;
         background-color: $secondary-color;
         border-radius: 50%;
-        margin: 5px;
+        margin: distanceSetter(5,1)*1px;
     }
     .dot:nth-child(2){
         background-color: $primary-color;
@@ -42,7 +42,7 @@
         align-items: center;
     }
     p:nth-child(1){
-        width: 50em;
+        width: distanceSetter(5,10)*1em;
         font-size: 0.8em;
     }
 }

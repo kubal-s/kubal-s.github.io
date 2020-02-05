@@ -8,13 +8,13 @@ $font-family : Verdana, Geneva, sans-serif;
 .page-section{
     display: grid;
     justify-items: center;
-    margin-top: 100px;
+    margin-top: distanceSetter(5,20)*1px;
     header{
         display: grid;
         justify-items: center;
         /* select second child of type p of header */
         p:nth-child(2){
-            margin: 10px 0px;
+            margin: distanceSetter(5,2)*1px 0px;
             font-size: 1.5em;
         }
         /* Select all child p where parent is header tag */

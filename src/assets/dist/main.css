@@ -318,10 +318,11 @@ svg .percentage-type {
   .about-me-container article div {
     display: grid;
     justify-content: space-between; }
-  .about-me-container article aside img {
-    width: 500px;
-    height: 500px;
-    object-fit: cover; }
+
+.about-me-container aside img {
+  width: 500px;
+  height: 500px;
+  object-fit: cover; }
 
 /* CSS to summary section */
 summary {

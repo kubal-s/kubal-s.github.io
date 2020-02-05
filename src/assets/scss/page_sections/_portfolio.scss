@@ -2,26 +2,26 @@
 .work-img-container {
     @include grid('grid-template-columns', 'repeat(4, auto)');
     justify-content: space-around;
-    margin: 40px 0px;
+    margin: distanceSetter(5,8)*1px 0px;
     div{
         background-color: $primary-color;
-        margin: 0px 10px 0px 10px;
+        margin: 0px distanceSetter(5,2)*1px 0px distanceSetter(5,2)*1px;
     }
     /* select all siblings of class work image on hover of type plus-sign */
     .wrk-img:hover +  .plus-sign{
         display: block;
-        height: 100px;
-        width: 100px;
+        height: distanceSetter(5,20)*1px;
+        width: distanceSetter(5,20)*1px;
         position: absolute;
-        z-index: 100;
-        margin: -227px 100px;
+        z-index: distanceSetter(5,20);
+        margin: -227px distanceSetter(5,20)*1px;
     }
     .plus-sign{
         display: none;
     }
     .wrk-img{
-        width: 300px;
-        height: 350px; 
+        width: distanceSetter(5,60)*1px;
+        height: distanceSetter(5,70)*1px; 
         position: relative;
     }
     .wrk-img:hover{

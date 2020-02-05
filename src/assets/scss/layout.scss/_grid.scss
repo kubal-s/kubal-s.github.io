@@ -4,3 +4,11 @@
       #{$grid-type}: #{$args};
     }
   }
+
+  @function distanceSetter($seedMargin, $numTimes){
+    $result : 0;
+    @for $i from 1 through  $numTimes{
+      $result : $result + $seedMargin;
+    }
+    @return $result;
+  }

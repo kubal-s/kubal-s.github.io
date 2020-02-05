@@ -1,6 +1,6 @@
 /* CSS to summary section */
 summary{
-    margin-top: 100px;
+    margin-top: distanceSetter(5,20)*1px;
     // using @mixin defined in grid layout and using through @include
     @include grid('grid-template-columns', 'repeat(auto-fill,minmax(500px,2fr))');
     justify-content: space-between;

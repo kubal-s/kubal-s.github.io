@@ -3,10 +3,10 @@
 .about-me-container{
     @include grid('grid-template-columns', 'repeat(2, auto)');
     >div{
-        padding: 0px 40px;
+        padding: 0px distanceSetter(5,8)*1px;
     }
     article{
-        width: 250px;
+        width: distanceSetter(5,50)*1px;
         display: grid;
         a{
             text-decoration: none;
@@ -16,12 +16,12 @@
             display: grid;
             justify-content: space-between;
         }
-        aside{
-            img{
-                width: 500px;
-                height: 500px;
-                object-fit: cover;
-            }
+    }
+    aside{
+        img{
+            width: distanceSetter(5,100)*1px;
+            height: distanceSetter(5,100)*1px;
+            object-fit: cover;
         }
     }
 }

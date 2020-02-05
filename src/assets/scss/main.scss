@@ -1,8 +1,9 @@
 //Imports all SCSS partials
 
 //imports layout and common styles
-@import "./base/base";
 @import "./layout.scss/grid";
+@import "./base/base";
+
 
 //imports styles for various components of project
 @import "./components/button";

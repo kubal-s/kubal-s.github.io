@@ -2,8 +2,8 @@
 // nested css rules
 // used mixins from grid layout scss
 .form-outer-container{
-    margin-top: 230px;
-    z-index: 100;
+    margin-top: distanceSetter(5,46)*1px;
+    z-index: distanceSetter(5,20);
     .form-container{
         .form-row{
             @include grid('grid-template-columns', 'repeat(2, auto)');
