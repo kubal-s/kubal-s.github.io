@@ -10,7 +10,14 @@
             justify-content: center;
         }
     }
+    a{
+        text-decoration: none;
+        color: $primary-color;
+        border: 1px solid;
+        padding: 10px;
+        border-radius: 15px;
 
+    }
 }
 .form-map-img{
     position: absolute;

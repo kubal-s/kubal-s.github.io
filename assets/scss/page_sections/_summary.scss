@@ -2,11 +2,12 @@
 summary{
     margin-top: distanceSetter(5,20)*1px;
     // using @mixin defined in grid layout and using through @include
-    @include grid('grid-template-columns', 'repeat(auto-fill,minmax(500px,2fr))');
-    justify-content: space-between;
+    @include grid('grid-template-columns', 'repeat(1,auto)');
+    justify-content: center;
+    text-align: center;
     .contact-details{
         // using @mixin defined in grid layout and using through @include
-        @include grid('grid-template-columns', 'repeat(3, auto)');
+        @include grid('grid-template-columns', 'repeat(3, minmax(300px, 3fr))');
         justify-content: space-between;
     }
 }

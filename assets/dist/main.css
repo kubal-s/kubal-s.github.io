@@ -20,7 +20,8 @@
 This is to have uniquiness of font family over the page */
 body {
   font-family: Verdana, Geneva, sans-serif;
-  word-spacing: 0.3em; }
+  word-spacing: 0.3em;
+  margin: 0; }
 
 .font-color-aqua {
   color: #00E4C0; }
@@ -127,22 +128,18 @@ svg .percentage-type {
 /* Custom CSS for the navbar on top of page */
 .navbar {
   display: grid;
-  justify-content: end; }
-
-.navbar a {
-  text-decoration: none;
-  color: black; }
-
-.navbar a:hover {
-  color: #00E4C0; }
-
-.navbar {
+  justify-content: end;
   padding: 20px;
   position: sticky;
   position: -webkit-sticky;
   top: 0.1px;
-  background-color: white;
+  background-color: #E7FFF7;
   z-index: 101; }
+  .navbar a {
+    text-decoration: none;
+    color: black; }
+  .navbar a:hover {
+    color: #00E4C0; }
 
 /* CSS  for the main page footer */
 .main-page-footer {
@@ -162,7 +159,7 @@ svg .percentage-type {
     box-shadow: 6px 7px 14px 1px #a1a9ad;
     margin: 0px 40px;
     padding: 35px;
-    height: 400px;
+    height: 500px;
     justify-content: space-around; }
     .service-card-container .service-card-type1 p:nth-child(1) {
       font-size: 2em;
@@ -289,7 +286,7 @@ svg .percentage-type {
     margin-top: 30px; }
   .news-card-container > article {
     margin: 20px;
-    height: 500px;
+    height: 550px;
     box-shadow: 6px 7px 14px 1px #a1a9ad;
     width: 400px;
     border-radius: 0.5em; }
@@ -327,17 +324,18 @@ svg .percentage-type {
 /* CSS to summary section */
 summary {
   margin-top: 100px;
-  justify-content: space-between; }
+  justify-content: center;
+  text-align: center; }
   @supports (display: grid) {
     summary {
       display: grid;
-      grid-template-columns: repeat(auto-fill,minmax(500px,2fr)); } }
+      grid-template-columns: repeat(1,auto); } }
   summary .contact-details {
     justify-content: space-between; }
     @supports (display: grid) {
       summary .contact-details {
         display: grid;
-        grid-template-columns: repeat(3, auto); } }
+        grid-template-columns: repeat(3, minmax(300px, 3fr)); } }
 
 .home-container {
   justify-content: space-around;
@@ -348,8 +346,8 @@ summary {
       display: grid;
       grid-template-columns: repeat(2, auto); } }
   .home-container a {
-    text-decoration: none;
-    color: black; }
+    text-decoration: underline;
+    color: #00E4C0; }
   .home-container .heading {
     font-size: xx-large; }
 
@@ -363,6 +361,12 @@ summary {
       .form-outer-container .form-container .form-row {
         display: grid;
         grid-template-columns: repeat(2, auto); } }
+  .form-outer-container a {
+    text-decoration: none;
+    color: #00E4C0;
+    border: 1px solid;
+    padding: 10px;
+    border-radius: 15px; }
 
 .form-map-img {
   position: absolute;

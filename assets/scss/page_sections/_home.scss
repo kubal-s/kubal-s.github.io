@@ -6,8 +6,8 @@
     margin: distanceSetter(5,8)*1px;
     padding-top: distanceSetter(5,4)*1px;
     a{
-        text-decoration: none;
-        color: $secondary-color;
+        text-decoration:underline;
+        color: $primary-color;
     }
     .heading{
         font-size: xx-large;

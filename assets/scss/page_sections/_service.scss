@@ -20,7 +20,7 @@
             }
             @if $i == 1{
                 @include grid('grid-column', 'auto/ span 2');
-                height: 400px;
+                height: 500px;
                 justify-content: space-around;
                 img{
                     height: 100px;
