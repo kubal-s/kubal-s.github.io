@@ -1,9 +1,3 @@
-# assignment-4-kubal-s
-The goal of this assignment is to learn about CSS positioning, Grid layout, SCSS features like variables, mixins, inheritance, loops, functions, math operations, etc.
-This project tries to simulate the given page look and feel using SCSS features mentioned above including pure tag and class selectors,combinators,pseudo classes and pseudo elements.
-
-Name: Shalvi Ulhas Kubal
-NUID: 001027262
 
 This project is created using HTML and SCSS.
 
